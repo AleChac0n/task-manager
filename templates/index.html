@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Tareas</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Tareas</h1>
+        <form id="createTaskForm">
+            <input type="text" id="title" placeholder="Título" required>
+            <textarea id="description" placeholder="Descripción" required></textarea>
+            <select id="status" required>
+                <option value="Pendiente">Pendiente</option>
+                <option value="En progreso">En progreso</option>
+                <option value="Completada">Completada</option>
+            </select>
+            <input type="number" id="user_id" placeholder="ID de usuario">
+            <button type="submit">Crear tarea</button>
+        </form>
+          <div id="message"></div>
+        <button onclick="window.location.href='/tasks-page'" class="view-tasks-btn">
+            Ver Tareas
+        </button>
+    </div>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
